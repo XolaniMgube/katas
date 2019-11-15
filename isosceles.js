@@ -1,17 +1,10 @@
-function isosceles(hash){
-
-    
-    for(var i = 1; i <= hash; i+=2){
-        for(var k = 1; k <= i; k++){
-            for(var s = 1; s <= (hash - 1); s++ ){
-                document.write("&nbsp;");
-            }
-            document.write("#");
-            
+function isosceles(x) { 
+    for (var i = 1; i <= x; i++) {
+        var s = " ";
+       for (var j = 1; j <= (2 * x - 1); j++) { 
+          (j >= x + 1 - i && j <= x - 1 + i)? s += "#" : s += " "; 
         }
-        document.write("<br>");
-        
-    }
-}
-
-isosceles(7);
+      console.log(s);
+      }
+  }
+  isosceles(5)
